@@ -1,4 +1,4 @@
-// Package util contains utility code for demosntration of go-libwebp.
+// Package util contains utility code for demonstration of go-libwebp.
 package util
 
 import (
@@ -7,7 +7,6 @@ import (
 	"image"
 	"image/png"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 )
@@ -41,7 +40,7 @@ func OpenFile(name string) (io io.Reader) {
 
 // ReadFile reads and returns data bytes of specified example file.
 func ReadFile(name string) (data []byte) {
-	data, err := ioutil.ReadFile(GetExFilePath(name))
+	data, err := os.ReadFile(GetExFilePath(name))
 	if err != nil {
 		panic(err)
 	}

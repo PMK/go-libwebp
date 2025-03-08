@@ -30,13 +30,18 @@ func TestEncodeAnimation(t *testing.T) {
 	}
 	defer anim.Close()
 
+	config, err := webp.ConfigLosslessPreset(9)
+	if err != nil {
+		t.Fatalf("got error: %v", err)
+	}
+
 	for i, im := range img {
 		// all frames of an animation must have the same dimensions
 		cropped := im.(interface {
 			SubImage(r image.Rectangle) image.Image
 		}).SubImage(image.Rect(0, 0, width, height))
 
-		if err := anim.AddFrame(cropped, 100*time.Millisecond); err != nil {
+		if err := anim.AddFrame(cropped, 100*time.Millisecond, config); err != nil {
 			t.Errorf("adding frame %d: %v", i, err)
 		}
 	}
