@@ -1,3 +1,3 @@
 module github.com/tronbyt/go-libwebp
 
-go 1.24.0
+go 1.25.4
