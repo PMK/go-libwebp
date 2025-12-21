@@ -2,7 +2,7 @@ repo = github.com/tronbyt/go-libwebp
 build_dir = /tmp
 cur_dir = $(shell pwd)
 libwebp_so = ${LIBWEBP_PREFIX}/lib/libwebp.so
-LIBWEBP_VERSION ?= 1.5.0
+LIBWEBP_VERSION ?= 1.6.0
 
 all: test
 

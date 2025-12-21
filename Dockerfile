@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.23
 
 RUN apk add --no-cache g++ make go
 
@@ -6,7 +6,7 @@ RUN mkdir -p /tmp/go-libwebp
 COPY Makefile /tmp/go-libwebp/Makefile
 
 ENV LIBWEBP_PREFIX="/usr/local" \
-    LIBWEBP_VERSION="1.5.0"
+    LIBWEBP_VERSION="1.6.0"
 RUN cd /tmp/go-libwebp && make libwebp
 
 ENV GOPATH="/go" \
