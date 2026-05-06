@@ -1,8 +1,7 @@
 package webp
 
 /*
-#cgo CFLAGS: -I/opt/homebrew/include
-#cgo LDFLAGS: -L/opt/homebrew/lib
+#cgo pkg-config: libwebp
 #include <stdlib.h>
 #include <webp/decode.h>
 

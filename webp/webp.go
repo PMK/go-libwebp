@@ -3,8 +3,7 @@
 package webp
 
 /*
-#cgo CFLAGS: -I/opt/homebrew/include
-#cgo LDFLAGS: -lwebp -lm -lsharpyuv
+#cgo pkg-config: libwebp
 
 #include <stdlib.h>
 #include <webp/encode.h>
